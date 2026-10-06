@@ -243,3 +243,51 @@ p{text-wrap:pretty}
 }
 @media(max-width:360px){.service-grid{grid-template-columns:1fr}.service-image{height:250px}.hero-actions{align-items:flex-start;flex-direction:column;gap:12px}.hero-layout{padding-top:47px}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition-duration:.01ms!important} }
+
+.site-nav a[aria-current=page]{color:#9a552c}
+.page-hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:440px;overflow:hidden;color:#fff;background:var(--ink)}
+.page-hero::before{position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(13,34,43,.88),rgba(13,34,43,.58) 55%,rgba(13,34,43,.13));content:""}
+.page-hero-services{background:url("assets/kitchen-sink.jpg") center 52%/cover}
+.page-hero-bath{background:url("assets/contemporary-bathroom.jpg") center 56%/cover}
+.page-hero-about{background:url("assets/dark-bathroom.jpg") center 55%/cover}
+.page-hero-contact{background:url("assets/toilet-bathroom.jpg") center 53%/cover}
+.page-hero-copy{padding-block:75px}
+.page-hero-copy h1{max-width:850px}
+.page-hero-copy>p:not(.kicker){max-width:530px;font-size:20px;color:#e4ecee;margin:0 0 27px}
+.about-story{background:var(--paper)}
+.about-layout{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:90px}
+.about-photo{position:relative;padding:0 54px 44px 0}
+.about-photo img:first-child{width:100%;height:430px;object-fit:cover;border-radius:5px}
+.about-photo img:last-child{position:absolute;right:0;bottom:0;width:43%;height:210px;object-fit:cover;border:8px solid var(--paper);border-radius:5px}
+.about-copy h2{margin-bottom:24px}
+.about-copy>p:not(.kicker){max-width:510px;color:var(--muted);font-size:19px;margin-bottom:25px}
+.contact.section-space{padding-top:80px}
+.map-controls{display:grid;gap:10px}
+.map-actions{display:flex;gap:12px;flex-wrap:wrap}
+.map-button{min-height:43px;padding:10px 15px;border:1px solid var(--ink);border-radius:3px;background:var(--ink);color:#fff;font-size:15px;font-weight:500}
+.map-button-secondary{background:#fff;color:var(--ink)}
+.map-controls>p{margin:0;color:var(--muted);font-size:14px;line-height:1.45}
+.map-privacy{font-size:13px!important}
+.map-wrap{overflow:hidden;border:1px solid #c8d1d3;border-radius:4px}
+#service-map{width:100%;height:360px;background:#e8edef}
+.leaflet-container{font-family:Barlow,Arial,sans-serif}
+.leaflet-control-attribution{font-size:11px!important}
+.whatsapp-box{margin-top:29px;padding:22px;background:#e7f2ed;border-left:4px solid #238b61;border-radius:3px}
+.whatsapp-box .kicker{color:#216849;margin-bottom:13px}
+.whatsapp-templates{display:flex;flex-wrap:wrap;gap:9px}
+.whatsapp-templates a{display:inline-flex;align-items:center;min-height:42px;padding:9px 12px;border:1px solid #9bbdae;border-radius:3px;color:#164e38;text-decoration:none;font-size:14px;font-weight:600;background:#f8fcf9}
+.whatsapp-templates a:hover{background:#fff}
+.whatsapp-status{margin:10px 0 0;color:#405e50;font-size:14px}
+.whatsapp-status:empty{display:none}
+.reviews-section{overflow:hidden;padding-block:67px;background:#f0ede6}
+.review-window{overflow:hidden;margin-top:30px}
+.review-track{display:flex;width:max-content;animation:review-drift 44s linear infinite}
+.review-set{display:flex;align-items:stretch;gap:20px;padding-right:20px}
+.review-card{display:flex;flex-direction:column;justify-content:space-between;width:min(410px,82vw);min-height:190px;margin:0;padding:25px 28px;background:#fff;border-top:3px solid var(--orange);border-radius:4px;box-shadow:0 8px 22px rgba(21,44,53,.06)}
+.review-card p{margin:0 0 24px;font-size:20px;line-height:1.4;color:#243b43}
+.review-card cite{font-size:14px;font-style:normal;font-weight:600;color:var(--muted)}
+@keyframes review-drift{to{transform:translateX(-50%)}}
+@media(max-width:1100px){.about-layout{gap:48px}.about-photo img:first-child{height:380px}.page-hero{min-height:410px}}
+@media(max-width:850px){.about-layout{grid-template-columns:1fr;gap:40px}.about-photo{max-width:680px}.page-hero{min-height:390px}.page-hero-copy{padding-block:65px}}
+@media(max-width:600px){.page-hero{min-height:390px}.page-hero-copy{padding-block:56px}.page-hero-copy h1{font-size:clamp(40px,10vw,52px)}.page-hero-copy>p:not(.kicker){font-size:18px}.about-photo{padding-right:34px;padding-bottom:30px}.about-photo img:first-child{height:310px}.about-photo img:last-child{height:160px;border-width:6px}.reviews-section{padding-block:48px}.review-card{min-height:170px;padding:21px 22px}.review-card p{font-size:18px}#service-map{height:310px}.whatsapp-box{padding:18px}}
+@media(prefers-reduced-motion:reduce){.review-track{animation:none}.review-set[aria-hidden=true]{display:none}}

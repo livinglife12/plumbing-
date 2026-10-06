@@ -1,6 +1,6 @@
 # Pipeworks plumbing website
 
-A responsive plumbing site built with plain HTML, CSS and JavaScript. No build step or framework is required.
+A responsive, multi-page plumbing site built with plain HTML, CSS and JavaScript. No build step or framework is required.
 
 ## Run locally
 
@@ -8,11 +8,15 @@ Open index.html in a browser, or serve this folder with a local static server. F
 
 ## Business details
 
-Edit site-config.js to set the business name, phoneDisplay, phoneHref and emailAddress. Check the service names, FAQ answers and page title against the work your team offers. The page includes a photographic hero, service tiles, bathroom collage, kitchen and fixture gallery, FAQs and a service request form.
+Edit site-config.js to set the business name, service area, phone number, email, WhatsApp number and map starting point. The site has Home, Services, Bathrooms, About and Contact pages.
 
-Phone and email details stay hidden until configured. The request form opens the visitor’s email app after a valid business email is added to site-config.js. It does not store or transmit requests to a server. Connect a form service or booking system for server-side submissions.
+The map opens at an example Johannesburg coordinate. Set mapCenterLat, mapCenterLng and mapZoom to your service area.
 
-Replace the sample bathroom and pipe photos with your own team and job photos when available.
+The contact form includes an interactive OpenStreetMap pin. Visitors can search a typed address, tap the map or choose their device location; location access is requested only after they press its button. Address searches go to OpenStreetMap's public Nominatim service, limited here to one request per second with no autocomplete. Map tiles show OpenStreetMap attribution. The public tile service is best-effort and has no availability guarantee; use a hosted map provider for a commercial deployment that needs guaranteed availability.
+
+The form prepares an email after a business email is configured. WhatsApp links use prewritten messages after an international-format WhatsApp number is configured. Both open an app on the visitor's device; the site does not store submissions.
+
+The review rail appears after permission-cleared customer quotes are added to the reviews array in site-config.js.
 
 ## Image and font credits
 

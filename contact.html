@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152c35">
+  <meta name="description" content="Contact Pipeworks for a plumbing repair, drain, bathroom fixture or hot-water service.">
+  <title>Contact Pipeworks | Request plumbing service</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+  <script src="site-config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="utility-bar"><div class="container utility-inner"><span>Contact Pipeworks</span><span data-config="serviceArea" data-hide-empty></span><a href="index.html">Back to home</a></div></div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html"><img class="brand-mark" src="assets/pipeworks-mark.svg" width="42" height="42" alt=""><span><strong data-config="businessName" data-fallback="Pipeworks">Pipeworks</strong><small>Plumbing & installations</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu <span aria-hidden="true">☰</span></button>
+    <nav class="site-nav" id="primary-navigation" aria-label="Main navigation"><a href="services.html">Services</a><a href="bathrooms.html">Bathrooms</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a><a class="button button-small" href="#request-form">Request service</a></nav>
+  </div></header>
+  <main id="main">
+    <section class="page-hero page-hero-contact"><div class="container page-hero-copy"><p class="kicker kicker-light">Plumbing repairs & installations</p><h1>Tell us where<br>the job is.</h1><p>Add the property address or pin it on the map.</p><a class="button" href="#request-form">Start a service request</a></div></section>
+    <section class="contact section-space" id="contact"><div class="container contact-layout">
+      <div class="contact-copy">
+        <p class="kicker">Get in touch</p><h2>Request a<br>service visit.</h2>
+        <p>Choose a job, add the property location, and pick how to send your request.</p>
+        <div class="contact__details">
+          <div data-optional-contact="phone"><span class="contact-label">Phone</span><a data-contact-phone href="#contact"><span data-config="phoneDisplay" data-fallback=""></span></a></div>
+          <div data-optional-contact="email"><span class="contact-label">Email</span><a data-contact-email href="#contact"><span data-config="emailAddress" data-fallback=""></span></a></div>
+        </div>
+        <div class="whatsapp-box" id="whatsapp">
+          <p class="kicker">Message on WhatsApp</p>
+          <div class="whatsapp-templates">
+            <a href="#whatsapp" target="_blank" rel="noopener noreferrer" data-whatsapp-template="repair">Plumbing repair</a>
+            <a href="#whatsapp" target="_blank" rel="noopener noreferrer" data-whatsapp-template="drain">Drain or toilet</a>
+            <a href="#whatsapp" target="_blank" rel="noopener noreferrer" data-whatsapp-template="bathroom">Bathroom quote</a>
+          </div>
+          <p class="whatsapp-status" id="whatsapp-status" role="status" aria-live="polite"></p>
+        </div>
+        <img class="contact-photo" src="assets/kitchen-sink.jpg" alt="Kitchen sink and mixer tap" width="1500" height="1000" loading="lazy">
+      </div>
+      <form class="contact-form" id="request-form">
+        <h3>Service details</h3>
+        <div class="form-grid">
+          <label><span>Your name *</span><input name="name" autocomplete="name" required></label>
+          <label><span>Phone or email *</span><input name="contact" required></label>
+          <label class="form-wide"><span>What do you need? *</span><select name="service" id="service-select" required><option value="" selected disabled>Choose a service</option><option>Leak or pipe repair</option><option>Drain or toilet</option><option>Fixture or bathroom</option><option>Hot water</option><option>Something else</option></select></label>
+          <label class="form-wide"><span>Property address, suburb or area *</span><input name="location" id="job-location" autocomplete="street-address" placeholder="Street, suburb or nearby landmark" required></label>
+          <div class="map-controls form-wide">
+            <div class="map-actions"><button class="map-button" type="button" id="find-location">Find on map</button><button class="map-button map-button-secondary" type="button" id="use-location">Use my location</button></div>
+            <p id="map-status" role="status" aria-live="polite">Tap the map to place a pin, or search the address above.</p>
+            <p class="map-privacy">The map and address search use OpenStreetMap. Choosing your location asks the browser first.</p>
+          </div>
+          <div class="form-wide map-wrap"><div id="service-map" role="application" aria-label="Select the property location on the map"></div><input type="hidden" name="latitude" id="location-lat"><input type="hidden" name="longitude" id="location-lng"></div>
+          <label class="form-wide"><span>Job details</span><textarea name="details" rows="3" placeholder="Anything else we should know?"></textarea></label>
+        </div>
+        <button class="button contact-submit" type="submit">Continue by email</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-layout">
+    <a class="brand brand-footer" href="index.html"><img class="brand-mark" src="assets/pipeworks-mark.svg" width="42" height="42" alt=""><span><strong data-config="businessName" data-fallback="Pipeworks">Pipeworks</strong><small>Plumbing & installations</small></span></a>
+    <div class="footer-links"><strong>Services</strong><a href="services.html">Plumbing repairs</a><a href="bathrooms.html">Bathrooms & fixtures</a><a href="services.html#hot-water">Hot water</a></div>
+    <div class="footer-links"><strong>Get in touch</strong><a href="#request-form">Request service</a><a href="#whatsapp">WhatsApp</a><a href="about.html">About Pipeworks</a></div>
+  </div><div class="container footer-bottom">© <span id="current-year"></span> <span data-config="businessName" data-fallback="Pipeworks"></span></div></footer>
+</body>
+</html>
