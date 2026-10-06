@@ -1,10 +1,9 @@
 window.PLUMBING_SITE_CONFIG = {
   businessName: "Pipeworks",
-  serviceArea: "[Add your service area]",
-  hours: "[Add business hours]",
-  registration: "[Add license or trade registration]",
-  phoneDisplay: "[Add your phone number]",
+  serviceArea: "your area",
+  hours: "Call for hours",
+  registration: "Trade registration",
+  phoneDisplay: "",
   phoneHref: "",
-  emailAddress: "",
-  reviewSource: "[Add your review platform]"
+  emailAddress: ""
 };

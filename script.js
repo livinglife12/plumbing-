@@ -9,9 +9,17 @@
 
   const phoneLink = document.querySelector("[data-contact-phone]");
   if (phoneLink && config.phoneHref) phoneLink.href = "tel:" + config.phoneHref.replace(/[^\d+]/g, "");
+  if (phoneLink && !config.phoneDisplay) phoneLink.closest("div").hidden = true;
 
   const emailLink = document.querySelector("[data-contact-email]");
   if (emailLink && config.emailAddress) emailLink.href = "mailto:" + config.emailAddress;
+  if (emailLink && !config.emailAddress) emailLink.closest("div").hidden = true;
+
+  const contactDetails = document.querySelector(".contact__details");
+  if (contactDetails && !contactDetails.querySelector("div:not([hidden])")) contactDetails.hidden = true;
+
+  const footerPhone = document.querySelector("[data-footer-phone]");
+  if (footerPhone && !config.phoneDisplay) footerPhone.hidden = true;
 
   const menuToggle = document.querySelector(".menu-toggle");
   const navigation = document.querySelector("#primary-navigation");
@@ -35,6 +43,17 @@
     });
   }
 
+  const ticker = document.querySelector(".trust-ticker");
+  const tickerToggle = document.querySelector(".ticker-toggle");
+  if (ticker && tickerToggle) {
+    tickerToggle.addEventListener("click", () => {
+      const isPaused = ticker.classList.toggle("is-paused");
+      tickerToggle.setAttribute("aria-pressed", String(isPaused));
+      tickerToggle.textContent = isPaused ? "Play" : "Pause";
+      tickerToggle.setAttribute("aria-label", isPaused ? "Resume trusted by ticker" : "Pause trusted by ticker");
+    });
+  }
+
   document.querySelectorAll("[data-service-choice]").forEach((link) => {
     link.addEventListener("click", () => {
       const select = document.querySelector("#service-select");
@@ -47,10 +66,14 @@
   const form = document.querySelector("#request-form");
   const status = document.querySelector("#form-status");
   if (form && status) {
+    if (config.emailAddress && config.emailAddress.includes("@")) {
+      status.textContent = "Your email app will open when you continue.";
+    }
+
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       if (!config.emailAddress || !config.emailAddress.includes("@")) {
-        status.textContent = "Add your business email in site-config.js before enabling this request form.";
+        status.textContent = "This request form needs a business email before it can send.";
         return;
       }
 
@@ -63,7 +86,6 @@
         "Details: " + (details.get("details") || "Not provided")
       ].join("\n");
       window.location.href = "mailto:" + config.emailAddress + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-      status.textContent = "Your email app should open with the request ready to send.";
     });
   }
 

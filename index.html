@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#172632">
-    <meta name="description" content="Thoughtful plumbing repairs, installations and maintenance. Update this description with your service area and business details.">
-    <title>Pipeworks — Plumbing, without the runaround</title>
+    <meta name="description" content="Plumbing repairs and installations in your area. Leaks, drains, bathroom fixtures and hot-water work from Pipeworks.">
+    <title>Pipeworks | Plumbing repairs and installations</title>
     <link rel="preload" href="assets/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
@@ -16,7 +16,7 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="topline">
       <div class="container topline__inner">
-        <span class="topline__note">Local plumbing, handled with care</span>
+        <span class="topline__note">REPAIRS / INSTALLS</span>
         <span class="topline__area">Serving <span data-config="serviceArea" data-fallback="Add your service area"></span></span>
       </div>
     </div>
@@ -35,9 +35,9 @@
 
         <nav class="site-nav" id="primary-navigation" aria-label="Main navigation">
           <a href="#services">Services</a>
-          <a href="#approach">Our approach</a>
+          <a href="#approach">How it works</a>
           <a href="#faqs">FAQs</a>
-          <a class="button button--small button--ink" href="#contact">Request a call</a>
+          <a class="button button--small button--ink" href="#contact">Request service</a>
         </nav>
       </div>
     </header>
@@ -46,26 +46,21 @@
       <section class="hero" id="top">
         <div class="container hero__layout">
           <div class="hero__copy">
-            <p class="eyebrow eyebrow--light"><span class="eyebrow__rule"></span> Plumbing for everyday life</p>
-            <h1>Good work.<br><em>Clear<br>answers.</em></h1>
-            <p class="hero__lead">From the leak you can’t ignore to the fixture you’ve been planning, we make the next step simple.</p>
+            <p class="eyebrow eyebrow--light"><span class="eyebrow__rule"></span> Plumbing / repairs / installs</p>
+            <h1>Need a<br>plumber?<br><em>Call us.</em></h1>
+            <p class="hero__lead">Leaks, drains, bathrooms and hot water in <span data-config="serviceArea" data-fallback="your area"></span>.</p>
             <div class="hero__actions">
-              <a class="button button--orange" href="#contact">Request a call</a>
-              <a class="text-link text-link--light" href="#services">Explore services</a>
+              <a class="button button--orange" href="#contact">Request a callback</a>
+              <a class="text-link text-link--light" href="#services">Services</a>
             </div>
             <div class="hero__meta">
               <span class="hero__meta-dot" aria-hidden="true"></span>
-              <span><span data-config="serviceArea" data-fallback="Your service area"></span> <span class="hero__meta-divider">/</span> <span data-config="hours" data-fallback="Add your service hours"></span></span>
+              <span><span data-config="serviceArea" data-fallback="Your service area"></span> <span class="hero__meta-divider">/</span> <span data-config="hours" data-fallback="Add callout hours"></span></span>
             </div>
           </div>
 
           <figure class="hero__photo">
             <img src="assets/contemporary-bathroom.jpg" alt="A bright bathroom with a freestanding bathtub and chrome tap" fetchpriority="high" width="1500" height="1000">
-            <figcaption class="photo-caption">
-              <span class="photo-caption__index">01 / THE FINISH</span>
-              <span>Details that make everyday spaces work better.</span>
-            </figcaption>
-            <span class="hero__photo-label" aria-hidden="true">PLUMBING<br>THAT FITS<br>REAL LIFE</span>
           </figure>
         </div>
       </section>
@@ -84,20 +79,32 @@
             <span class="proof-rail__label">When to call</span>
             <strong data-config="hours" data-fallback="Add business hours"></strong>
           </div>
-          <div class="proof-rail__aside">
-            Replace these fields with the details customers check before booking.
+        </div>
+      </section>
+
+      <section class="trust-ticker" aria-label="Customer groups Pipeworks works with">
+        <div class="trust-ticker__lead">
+          <span>Trusted by</span>
+          <button class="ticker-toggle" type="button" aria-pressed="false" aria-label="Pause trusted by ticker">Pause</button>
+        </div>
+        <div class="trust-ticker__viewport">
+          <div class="trust-ticker__track" aria-hidden="true">
+            <div class="trust-ticker__set">
+              <span>Homeowners</span><span>Property managers</span><span>Local businesses</span><span>Builders</span>
+            </div>
+            <div class="trust-ticker__set" aria-hidden="true">
+              <span>Homeowners</span><span>Property managers</span><span>Local businesses</span><span>Builders</span>
+            </div>
           </div>
+          <span class="sr-only">Trusted by homeowners, property managers, local businesses and builders.</span>
         </div>
       </section>
 
       <section class="services section-pad" id="services">
         <div class="container">
-          <div class="section-heading section-heading--split">
-            <div>
-              <p class="eyebrow"><span class="eyebrow__rule"></span> What we can help with</p>
-              <h2>The important things<br>behind the wall.</h2>
-            </div>
-            <p class="section-heading__aside">Choose the service lines that match your business. Keep the descriptions specific and easy to scan.</p>
+          <div class="section-heading">
+            <p class="section-index">01 / SERVICE LIST</p>
+            <h2>What we fix.</h2>
           </div>
 
           <div class="service-list">
@@ -105,120 +112,86 @@
               <span class="service-row__number">01</span>
               <div class="service-row__main">
                 <h3>Leaks &amp; pipe repairs</h3>
-                <p>Find the source, understand the options and get the repair moving.</p>
               </div>
-              <a class="service-row__link" href="#contact" data-service-choice="Leak or pipe repair">Ask about this service</a>
+              <a class="service-row__link" href="#contact" aria-label="Request leak or pipe repair" data-service-choice="Leak or pipe repair">Request this job</a>
             </article>
             <article class="service-row">
               <span class="service-row__number">02</span>
               <div class="service-row__main">
                 <h3>Drains &amp; toilets</h3>
-                <p>Practical help for slow drains, blockages, running toilets and more.</p>
               </div>
-              <a class="service-row__link" href="#contact" data-service-choice="Drain or toilet">Ask about this service</a>
+              <a class="service-row__link" href="#contact" aria-label="Request drain or toilet work" data-service-choice="Drain or toilet">Request this job</a>
             </article>
             <article class="service-row">
               <span class="service-row__number">03</span>
               <div class="service-row__main">
-                <h3>Fixtures &amp; bathrooms</h3>
-                <p>Installations and updates that make the room work better.</p>
+                <h3>Taps &amp; bathrooms</h3>
               </div>
-              <a class="service-row__link" href="#contact" data-service-choice="Fixture or bathroom">Ask about this service</a>
+              <a class="service-row__link" href="#contact" aria-label="Request tap or bathroom work" data-service-choice="Fixture or bathroom">Request this job</a>
             </article>
             <article class="service-row">
               <span class="service-row__number">04</span>
               <div class="service-row__main">
                 <h3>Hot water</h3>
-                <p>Maintenance, repairs and replacement options for your system.</p>
               </div>
-              <a class="service-row__link" href="#contact" data-service-choice="Hot water">Ask about this service</a>
+              <a class="service-row__link" href="#contact" aria-label="Request hot-water work" data-service-choice="Hot water">Request this job</a>
             </article>
           </div>
-          <p class="template-note">Edit the service list to reflect the work your team actually takes on.</p>
         </div>
       </section>
 
       <section class="finish" id="approach">
         <div class="finish__image">
           <img src="assets/dark-bathroom.jpg" alt="A finished bathroom with a glass shower, dark vanity and black fixtures" loading="lazy" width="1500" height="1000">
-          <span class="finish__image-tag">A considered finish</span>
+          <span class="finish__image-tag">TAPS / SHOWERS / BATHS</span>
         </div>
         <div class="finish__copy">
-          <p class="eyebrow eyebrow--light"><span class="eyebrow__rule"></span> The details matter</p>
-          <h2>Leave the room<br>better than you<br><em>found it.</em></h2>
-          <p>People let us into the places they live and work. Good service means taking care with the space, explaining the options and respecting the decision.</p>
-          <ul class="finish__list">
-            <li><span>01</span> Explain the options in plain language</li>
-            <li><span>02</span> Agree on the next step before work begins</li>
-            <li><span>03</span> Check the work and tidy the area</li>
-          </ul>
-          <a class="text-link text-link--light" href="#contact">Tell us what needs attention</a>
+          <p class="section-index section-index--light">02 / BATHROOMS</p>
+          <h2>Taps.<br>Showers.<br><em>Bathrooms.</em></h2>
+          <a class="text-link text-link--light" href="#contact" data-service-choice="Fixture or bathroom">Request bathroom work</a>
         </div>
       </section>
 
       <section class="approach section-pad">
         <div class="approach__texture" role="img" aria-label="Close-up of dark water pipes with droplets"></div>
         <div class="container approach__content">
-          <p class="eyebrow eyebrow--light"><span class="eyebrow__rule"></span> How it works</p>
-          <h2>Three steps.<br><em>No mystery.</em></h2>
+          <p class="section-index section-index--light">03 / THE CALL</p>
+          <h2>Tell us.<br><em>We call back.</em></h2>
           <div class="steps">
             <article class="step">
               <span class="step__number">01</span>
-              <h3>Tell us what’s happening</h3>
-              <p>Share the issue, your location and a good way to reach you.</p>
+              <h3>Choose a service</h3>
             </article>
             <article class="step">
               <span class="step__number">02</span>
-              <h3>Get a clear next step</h3>
-              <p>Update this with how your team assesses a job and provides estimates.</p>
+              <h3>Leave your number</h3>
             </article>
             <article class="step">
               <span class="step__number">03</span>
-              <h3>Choose how to proceed</h3>
-              <p>Confirm the scope and timing that work for the customer and the crew.</p>
+              <h3>Set a time</h3>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section class="review section-pad" aria-labelledby="review-heading">
-        <div class="container review__layout">
-          <div class="review__intro">
-            <p class="eyebrow"><span class="eyebrow__rule"></span> A good word travels</p>
-            <h2 id="review-heading">Let your customers<br>say it best.</h2>
-            <p>Replace this space with a real review that you have permission to share.</p>
-            <span class="review__source" data-config="reviewSource" data-fallback="Add your review source"></span>
-          </div>
-          <blockquote class="review-card">
-            <span class="review-card__mark" aria-hidden="true">“</span>
-            <p>Add a specific customer review here. A useful quote mentions the job, what the service felt like, or a detail that made a difference.</p>
-            <footer>
-              <span class="review-card__name">[Customer name]</span>
-              <span class="review-card__place">[Neighbourhood or town]</span>
-            </footer>
-          </blockquote>
         </div>
       </section>
 
       <section class="faq section-pad" id="faqs">
         <div class="container faq__layout">
           <div class="faq__intro">
-            <p class="eyebrow"><span class="eyebrow__rule"></span> Before you book</p>
-            <h2>Good questions<br>deserve straight answers.</h2>
-            <p>Update these answers with your actual service policies and process.</p>
+            <p class="section-index">04 / QUESTIONS</p>
+            <h2>Before you call.</h2>
           </div>
           <div class="faq-list">
             <details>
               <summary>Which areas do you cover?</summary>
-              <p>Add the towns and neighbourhoods your team serves. Keep this list accurate and current.</p>
+              <p>We work in <span data-config="serviceArea" data-fallback="your service area"></span>.</p>
             </details>
             <details>
-              <summary>How do estimates work?</summary>
-              <p>Explain whether you charge a call-out fee, when an estimate is provided and what it includes.</p>
+              <summary>What should I tell you?</summary>
+              <p>Your location, a call-back number and what the water is doing.</p>
             </details>
             <details>
-              <summary>Do you take urgent plumbing calls?</summary>
-              <p>Add the hours, job types and response expectations your business can reliably support.</p>
+              <summary>What can I book?</summary>
+              <p>Leaks and pipes, drains and toilets, bathroom fixtures, and hot-water work.</p>
             </details>
           </div>
         </div>
@@ -227,9 +200,9 @@
       <section class="contact section-pad" id="contact">
         <div class="container contact__layout">
           <div class="contact__copy">
-            <p class="eyebrow eyebrow--light"><span class="eyebrow__rule"></span> Start with a conversation</p>
-            <h2>What needs<br><em>fixing?</em></h2>
-            <p>Tell us a little about the job. We’ll follow up using the contact details you share.</p>
+            <p class="section-index section-index--light">05 / CONTACT</p>
+            <h2>Tell us<br><em>what’s wrong.</em></h2>
+            <p>Choose a service and leave a number. We’ll call you back.</p>
             <div class="contact__details">
               <div>
                 <span class="contact__label">Call</span>
@@ -245,7 +218,7 @@
 
           <form class="contact-form" id="request-form">
             <div class="contact-form__intro">
-              <span class="contact-form__step">SERVICE REQUEST / 01</span>
+              <span class="contact-form__step">YOUR DETAILS</span>
               <p>Fields marked with an asterisk are required.</p>
             </div>
             <div class="form-grid">
@@ -273,8 +246,8 @@
                 <textarea name="details" rows="3" placeholder="Where is the issue, and when did it start?"></textarea>
               </label>
             </div>
-            <button class="button button--orange contact-form__submit" type="submit">Prepare request</button>
-            <p class="form-status" id="form-status" role="status" aria-live="polite">Add a business email in site-config.js to enable email requests.</p>
+            <button class="button button--orange contact-form__submit" type="submit">Continue by email</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
@@ -282,18 +255,18 @@
 
     <footer class="site-footer">
       <div class="container site-footer__main">
-        <a class="brand brand--footer" href="#top" aria-label="Back to top">
+        <a class="brand brand--footer" href="#top" aria-label="Pipeworks home">
           <span class="brand__mark" aria-hidden="true"><span></span><span></span><span></span></span>
           <span class="brand__name" data-config="businessName" data-fallback="Your business name">Pipeworks</span>
         </a>
-        <p>Good work. Clear answers. Plumbing for everyday life.</p>
-        <a class="site-footer__top" href="#top">Back to top</a>
+        <p>Repairs / installations / <span data-config="serviceArea" data-fallback="your service area"></span></p>
+        <a class="site-footer__top" href="#contact">Request service</a>
       </div>
       <div class="container site-footer__bottom">
         <span>© <span id="current-year"></span> <span data-config="businessName" data-fallback="Your business name"></span></span>
-        <span>Template preview — replace the sample details before launch.</span>
+        <span data-config="phoneDisplay" data-fallback="Add your phone number" data-footer-phone></span>
       </div>
     </footer>
-    <div class="mobile-cta"><a class="button button--orange" href="#contact">Request a call</a></div>
+    <div class="mobile-cta"><a class="button button--orange" href="#contact">Request a callback</a></div>
   </body>
 </html>

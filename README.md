@@ -1,25 +1,22 @@
-# Pipeworks plumbing website template
+# Pipeworks plumbing website
 
-A responsive, single-page website template for a residential plumbing business. It uses plain HTML, CSS and JavaScript, with no build step or framework dependency.
+A responsive plumbing site built with plain HTML, CSS and JavaScript. No build step or framework is required.
 
 ## Run locally
 
 Open index.html in a browser, or serve this folder with a local static server. For example, run python -m http.server 4173 from this folder and visit http://localhost:4173.
 
-## Customize before launch
+## Business details
 
-1. Edit site-config.js to set the business name, service area, hours, registration details, phone number and email.
-2. Replace the sample service copy with work your team actually offers.
-3. Add a real customer review and its source. The quote in the page is an explicit placeholder.
-4. Update the estimate, emergency-call and service-area answers in the FAQ.
-5. Replace the sample bathroom and pipe images with photos of your own team and completed work when available.
-6. Update the page title and description in index.html.
+Edit site-config.js to set the business name, service area, callout hours, registration details, phone number and email. Check the service names, FAQ answers and page title against the work your team offers.
 
-The request form uses a mailto link after a valid business email is added to site-config.js. It opens the visitor’s email application; it does not store or transmit requests to a server. Connect a form service or booking system if you need server-side submissions.
+The moving “Trusted by” ticker currently names customer groups, not verified clients. Replace those labels with real customer or partner names only when you can substantiate them, or change its heading to “For”.
 
-## Design and image notes
+Phone and email details stay hidden until configured. The request form opens the visitor’s email app after a valid business email is added to site-config.js. It does not store or transmit requests to a server. Connect a form service or booking system for server-side submissions.
 
-The visual direction uses deep blue-green, warm paper and safety orange, with a trade-signage type system and a service list that is easy to scan. The layout keeps service details and proof close to the contact path.
+Replace the sample bathroom and pipe photos with your own team and job photos when available.
+
+## Image and font credits
 
 Photo credits:
 
@@ -27,6 +24,6 @@ Photo credits:
 - “Stylish bathroom featuring a glass shower and elegant black vanity,” by Curtis Adams, Pexels: https://www.pexels.com/photo/bathroom-with-black-cabinets-round-mirrors-and-glass-shower-cabin-5502257/
 - “An abstract close-up of vertically arranged wet black pipes with raindrops,” by Monstera Production, Pexels: https://www.pexels.com/photo/close-up-pipes-in-rain-7794404/
 
-Pexels permits use of its photos on websites and templates; attribution is optional and appreciated. See https://www.pexels.com/license/.
+Pexels allows these photos on websites; attribution is optional. See https://www.pexels.com/license/.
 
 Barlow and Barlow Condensed are served locally from this repository. Their SIL Open Font License is in assets/fonts/OFL.txt.
