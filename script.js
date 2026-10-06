@@ -1,10 +1,10 @@
 (() => {
   const config = window.PLUMBING_SITE_CONFIG || {};
-  const fallbackFor = (node) => node.dataset.fallback || ("Add " + node.dataset.config);
+  const fallbackFor = (node) => node.dataset.fallback || "";
 
   document.querySelectorAll("[data-config]").forEach((node) => {
     const value = config[node.dataset.config];
-    node.textContent = value && value.trim() ? value : fallbackFor(node);
+    node.textContent = typeof value === "string" && value.trim() ? value : fallbackFor(node);
   });
 
   const phoneLink = document.querySelector("[data-contact-phone]");
@@ -40,17 +40,6 @@
     navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeMenu();
-    });
-  }
-
-  const ticker = document.querySelector(".trust-ticker");
-  const tickerToggle = document.querySelector(".ticker-toggle");
-  if (ticker && tickerToggle) {
-    tickerToggle.addEventListener("click", () => {
-      const isPaused = ticker.classList.toggle("is-paused");
-      tickerToggle.setAttribute("aria-pressed", String(isPaused));
-      tickerToggle.textContent = isPaused ? "Play" : "Pause";
-      tickerToggle.setAttribute("aria-label", isPaused ? "Resume trusted by ticker" : "Pause trusted by ticker");
     });
   }
 

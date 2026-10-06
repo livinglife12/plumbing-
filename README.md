@@ -8,9 +8,7 @@ Open index.html in a browser, or serve this folder with a local static server. F
 
 ## Business details
 
-Edit site-config.js to set the business name, service area, callout hours, registration details, phone number and email. Check the service names, FAQ answers and page title against the work your team offers.
-
-The moving “Trusted by” ticker currently names customer groups, not verified clients. Replace those labels with real customer or partner names only when you can substantiate them, or change its heading to “For”.
+Edit site-config.js to set the business name, phoneDisplay, phoneHref and emailAddress. Check the service names, FAQ answers and page title against the work your team offers. The page includes a photographic hero, service tiles, bathroom collage, kitchen and fixture gallery, FAQs and a service request form.
 
 Phone and email details stay hidden until configured. The request form opens the visitor’s email app after a valid business email is added to site-config.js. It does not store or transmit requests to a server. Connect a form service or booking system for server-side submissions.
 
@@ -23,6 +21,12 @@ Photo credits:
 - “Modern minimalist style interior design of home bathroom with stone walls and oval white bathtub with chrome faucet,” by Max Vakhtbovych, Pexels: https://www.pexels.com/photo/contemporary-bathroom-interior-with-bathtub-7031564/
 - “Stylish bathroom featuring a glass shower and elegant black vanity,” by Curtis Adams, Pexels: https://www.pexels.com/photo/bathroom-with-black-cabinets-round-mirrors-and-glass-shower-cabin-5502257/
 - “An abstract close-up of vertically arranged wet black pipes with raindrops,” by Monstera Production, Pexels: https://www.pexels.com/photo/close-up-pipes-in-rain-7794404/
+- Kitchen sink and running tap, Karolina Grabowska / Kaboompics: https://www.pexels.com/photo/water-flows-from-the-tap-to-sink-6256/
+- Running shower head, Darya Grey_Owl: https://www.pexels.com/photo/shower-head-in-close-up-13444798/
+- Bathroom basin and toilet, Max Vakhtbovych: https://www.pexels.com/photo/interior-of-bathroom-with-sink-and-toilet-7167081/
+- Basin tap detail, Rodrigo Simoes: https://www.pexels.com/photo/faucet-in-a-bathroom-11209662/
+
+These are stock photographs illustrating services and rooms. They are not presented as Pipeworks' completed projects or customer endorsements. The pipe logo is an original SVG.
 
 Pexels allows these photos on websites; attribution is optional. See https://www.pexels.com/license/.
 
