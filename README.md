@@ -8,13 +8,13 @@ Open index.html in a browser, or serve this folder with a local static server. F
 
 ## Business details
 
-Edit site-config.js to set the business name, service area, phone number, email, WhatsApp number and map starting point. The site has Home, Services, Bathrooms, About and Contact pages.
+Edit site-config.js to set the business name, service area, phone number, email, WhatsApp number and map starting point. The phone and WhatsApp entries are examples (`+27 99 999 9999`); replace them with the real business number before launch. Use international digits for `whatsappNumber`, without a plus sign. The site has Home, Services, Bathrooms, About and Contact pages.
 
 The map opens at an example Johannesburg coordinate. Set mapCenterLat, mapCenterLng and mapZoom to your service area.
 
 The contact form includes an interactive OpenStreetMap pin. Visitors can search a typed address, tap the map or choose their device location; location access is requested only after they press its button. Address searches go to OpenStreetMap's public Nominatim service, limited here to one request per second with no autocomplete. Map tiles show OpenStreetMap attribution. The public tile service is best-effort and has no availability guarantee; use a hosted map provider for a commercial deployment that needs guaranteed availability.
 
-The form prepares an email after a business email is configured. WhatsApp links use prewritten messages after an international-format WhatsApp number is configured. Both open an app on the visitor's device; the site does not store submissions.
+The form prepares an email after a business email is configured. WhatsApp buttons open a prewritten message; when the visitor fills in the form, the message can include their contact, job details, address and map pin. Both open an app on the visitor's device; the site does not store submissions.
 
 The review rail appears after permission-cleared customer quotes are added to the reviews array in site-config.js.
 

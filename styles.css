@@ -268,16 +268,18 @@ p{text-wrap:pretty}
 .map-button-secondary{background:#fff;color:var(--ink)}
 .map-controls>p{margin:0;color:var(--muted);font-size:14px;line-height:1.45}
 .map-privacy{font-size:13px!important}
-.map-wrap{overflow:hidden;border:1px solid #c8d1d3;border-radius:4px}
+.map-wrap{position:relative;z-index:0;isolation:isolate;min-width:0;max-width:100%;overflow:hidden;border:1px solid #c8d1d3;border-radius:4px}
 #service-map{width:100%;height:360px;background:#e8edef}
 .leaflet-container{font-family:Barlow,Arial,sans-serif}
 .leaflet-control-attribution{font-size:11px!important}
-.whatsapp-box{margin-top:29px;padding:22px;background:#e7f2ed;border-left:4px solid #238b61;border-radius:3px}
+.whatsapp-box{min-width:0;max-width:100%;margin-top:29px;padding:22px;background:#e7f2ed;border-left:4px solid #238b61;border-radius:3px}
 .whatsapp-box .kicker{color:#216849;margin-bottom:13px}
-.whatsapp-templates{display:flex;flex-wrap:wrap;gap:9px}
-.whatsapp-templates a{display:inline-flex;align-items:center;min-height:42px;padding:9px 12px;border:1px solid #9bbdae;border-radius:3px;color:#164e38;text-decoration:none;font-size:14px;font-weight:600;background:#f8fcf9}
+.whatsapp-cta{display:flex;width:100%;margin-bottom:15px;background:#238b61;color:#fff}
+.whatsapp-cta:hover{background:#176e49}
+.whatsapp-templates{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,130px),1fr));gap:9px}
+.whatsapp-templates a{display:flex;align-items:center;justify-content:center;min-width:0;min-height:44px;padding:9px 12px;border:1px solid #9bbdae;border-radius:3px;color:#164e38;text-decoration:none;text-align:center;overflow-wrap:anywhere;font-size:14px;font-weight:600;line-height:1.25;background:#f8fcf9}
 .whatsapp-templates a:hover{background:#fff}
-.whatsapp-status{margin:10px 0 0;color:#405e50;font-size:14px}
+.whatsapp-status{margin:10px 0 0;color:#405e50;font-size:14px;overflow-wrap:anywhere}
 .whatsapp-status:empty{display:none}
 .reviews-section{overflow:hidden;padding-block:67px;background:#f0ede6}
 .review-window{overflow:hidden;margin-top:30px}

@@ -1,10 +1,11 @@
 window.PLUMBING_SITE_CONFIG = {
   businessName: "Pipeworks",
   serviceArea: "",
-  phoneDisplay: "",
-  phoneHref: "",
+  phoneDisplay: "+27 99 999 9999",
+  phoneHref: "+27999999999",
   emailAddress: "",
-  whatsappNumber: "",
+  // Example only. Replace with the real WhatsApp number in international format.
+  whatsappNumber: "27999999999",
   // Example map start location. Set these to the centre of your service area.
   mapCenterLat: -26.2041,
   mapCenterLng: 28.0473,

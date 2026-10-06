@@ -173,11 +173,14 @@
         return;
       }
       const name = document.querySelector('[name="name"]')?.value.trim();
+      const contact = document.querySelector('[name="contact"]')?.value.trim();
       const location = document.querySelector("#job-location")?.value.trim();
       const lat = document.querySelector("#location-lat")?.value;
       const lng = document.querySelector("#location-lng")?.value;
       const service = document.querySelector("#service-select")?.value;
+      const details = document.querySelector('[name="details"]')?.value.trim();
       const messageTemplates = {
+        general: "Hello Pipeworks, I would like to request plumbing service.",
         repair: "Hello Pipeworks, I need help with a plumbing repair.",
         drain: "Hello Pipeworks, I need help with a drain or toilet.",
         bathroom: "Hello Pipeworks, I would like to ask about bathroom plumbing."
@@ -185,9 +188,11 @@
       const message = [
         messageTemplates[link.dataset.whatsappTemplate] || "Hello Pipeworks, I would like to request plumbing service.",
         name && "Name: " + name,
+        contact && "Contact: " + contact,
         service && "Service: " + service,
         location && "Property: " + location,
-        lat && lng && "Map pin: " + lat + ", " + lng
+        lat && lng && "Map pin: " + lat + ", " + lng,
+        details && "Details: " + details
       ].filter(Boolean).join("\n");
       link.href = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
     });
